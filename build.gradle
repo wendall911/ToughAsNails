@@ -94,7 +94,7 @@ task changelog(type: JenkinsChangelog) {
     output = 'build/libs/' + project.getName() + '-' + project.version + '-changelog.txt';
 }
 
-tasks.build.dependsOn('changelog')
+//tasks.build.dependsOn('changelog')
 
 task sourcesJar(type: Jar) {
     from sourceSets.main.allJava
@@ -149,7 +149,7 @@ task listOutputs << {
 tasks.build.finalizedBy('listOutputs')
 
 artifacts {
-    archives changelog.output
+    //archives changelog.output
     archives sourcesJar
     archives deobfJar
 	archives apiJar
